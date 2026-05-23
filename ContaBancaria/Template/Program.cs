@@ -1,3 +1,4 @@
+using ContaBancaria.Servicos;
 using Exemplo;
 using Microsoft.EntityFrameworkCore;
 using Template.Infra;
@@ -10,6 +11,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<ServPagamentos>();
 
 builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))
