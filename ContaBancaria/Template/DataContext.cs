@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Reflection.Emit;
-using ContaBancaria;
-using ContaBancaria.Servicos;
+﻿using ContaBancaria;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Reflection.Emit;
 
 namespace Exemplo
 {
@@ -14,7 +13,6 @@ namespace Exemplo
         }
 
         public DbSet<Conta> Contas { get; set; }
-        public DbSet<Pagamento> Pagamentos { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
